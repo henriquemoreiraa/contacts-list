@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react'
+import './style.css'
+import * as C from './app.styles'
+import { Item } from './types/item'
 
-function App() {
+function App(): any {
+  const [list, setList] = useState<Item[]>([
+    { id: 1, name: 'Roger', email: 'rogeralvexs123@gmail.com', number: '922344432' },
+    { id: 2, name: 'Rogera', email: 'rogeralvexs123@gmail.com', number: '922344432' }
+  ])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <C.Container>
+      <C.Area>
+        <C.Header>Contacts List</C.Header>
+        
+        {list.map((item, index) => (
+          <C.Contact>
+            <p>Name: {item.name}</p>
+            <p>Email: {item.email}</p>
+            <p>Number: {item.number}</p>
+          </C.Contact> ))}a
+        
+      
+      </C.Area>
+    </C.Container>
   );
 }
 
