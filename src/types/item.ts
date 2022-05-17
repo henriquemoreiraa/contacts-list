@@ -2,5 +2,5 @@ export type Item = {
     id: number,
     name: string,
     email: string,
-    number: string,
+    number: number,
 }
