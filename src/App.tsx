@@ -18,7 +18,7 @@ function App(): any {
           <C.Contact>
             <p>Name: {item.name}</p>
             <p>Email: {item.email}</p>
-            <p>Number: {item.number}</p>
+            <p>Numberr {item.number}</p>
           </C.Contact> ))}
         
       
