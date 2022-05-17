@@ -19,7 +19,7 @@ function App(): any {
             <p>Name: {item.name}</p>
             <p>Email: {item.email}</p>
             <p>Number: {item.number}</p>
-          </C.Contact> ))}a
+          </C.Contact> ))}
         
       
       </C.Area>
