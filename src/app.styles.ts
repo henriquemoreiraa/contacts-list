@@ -8,6 +8,11 @@ export const Container = styled.div`
 `;
 
 export const Area = styled.div`
+    .message--add--new {
+        text-align: center;
+        margin-top: 80px
+    }
+
     margin: auto;
     max-width: 980px;
     padding: 10px;

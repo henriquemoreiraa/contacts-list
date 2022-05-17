@@ -39,8 +39,12 @@ export const AddContact = ({ onAdd }: Props) => {
                             <input onChange={e=>setName(e.target.value)} placeholder="Name" type="text" />
                             <input onChange={e=>setEmail(e.target.value)} placeholder="Email" type="email" />
                         </div>
-                            <p className="center"><input onChange={e=>setNumber(parseInt(e.target.value))} placeholder="Number" type="number" /></p>
-                            <p className="center addConct" ><button className="add" onClick={addContactList}>+</button> Add contact</p>
+                            <p className="center">
+                                <input onChange={e=>setNumber(parseInt(e.target.value))} placeholder="Number" type="number" />
+                            </p>
+                            <p className="center addConct" >
+                                <button className="add" onClick={addContactList}>+</button> Add contact
+                            </p>
                     </div>
                 )   
             }

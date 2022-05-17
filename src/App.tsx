@@ -7,10 +7,7 @@ import { AddContact } from "./components/addContact"
 import { stringify } from 'querystring'
 
 function App(): any {
-  const [list, setList] = useState<Item[]>([
-    { id: 1, name: 'Roger', email: 'rogeralvexs123@gmail.com', number: 922344432 },
-    { id: 2, name: 'Rogera', email: 'rogeralvexs123@gmail.com', number: 922344432 }
-  ])
+  const [list, setList] = useState<Item[]>([])
 
   const addNewContactList = (name: string, email: string, number: number) => {
     const newList = [...list]
@@ -23,6 +20,11 @@ function App(): any {
     setList(newList)
   }
 
+  const deleteContact = (id: number) => {
+    const newList = list.filter(e => e.id !== id)
+    setList(newList)
+  }
+
   return (
     <C.Container>
       <C.Area>
@@ -30,11 +32,18 @@ function App(): any {
 
         <AddContact onAdd={addNewContactList}/>
         
-        {list.map((item, index) => (
-        
-          <ListItem key={index} item={item} /> ))}
-        
-      
+        {list.length < 1 ? (      
+          <div className='message--add--new'>
+            <h1>You have any contacts!</h1>
+            <h2>Add a new contact above</h2>
+          </div>
+        ) : (
+          <div>
+            {list.map((item, index) => (
+            <ListItem key={index} item={item} onDelete={deleteContact}/> ))}
+          </div>
+        )
+        }
       </C.Area>
     </C.Container>
   );

@@ -8,7 +8,7 @@ export const AddContact = styled.div`
         text-align: center;
         border: none;
         cursor: pointer;
-        color: black;
+        color: #17181F;
         font-size: 20px;
         border-radius: 50%;
         margin-left: 10px;
