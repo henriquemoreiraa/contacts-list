@@ -47,7 +47,7 @@ function App(): any {
         
         {list.length < 1 ? (      
           <div className='message--add--new'>
-            <h1>You have any contacts!</h1>
+            <h1>You don't have any contact yet!</h1>
             <h2>Add a new contact above</h2>
           </div>
         ) : (
